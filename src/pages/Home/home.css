@@ -1,6 +1,7 @@
 .lista-filmes {
   max-width: 800px;
   height: 14px auto;
+  margin: 0 auto;
 }
 
 .loading {
@@ -41,10 +42,8 @@
   padding: 10px 0;
   font-size: 24px;
   background-color: #116feb;
-  color: #fff;
-  cursor: pointer;
   text-decoration: none;
-  font-style: bold;
+  color: #fff;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
