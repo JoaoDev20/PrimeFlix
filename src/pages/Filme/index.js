@@ -42,9 +42,11 @@ function Filme() {
 
     let filmesSalvos = JSON.parse(minhaLista) || [];
 
-    const hasFilme = filmesSalvos.some(() => filmesSalvos.id === filme.id);
+    const hasFilme = filmesSalvos.some(
+      (filmesSalvos) => filmesSalvos.id === filme.id
+    );
 
-    if (!hasFilme) {
+    if (hasFilme) {
       alert("ESSE FILME JÁ ESTÁ NA LISTA");
       return;
     }
@@ -52,6 +54,7 @@ function Filme() {
     filmesSalvos.push(filme);
     localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
     alert("FILME SALVO COM SUCESSO");
+    return;
   }
 
   if (loading) {
